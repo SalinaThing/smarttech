@@ -1,0 +1,240 @@
+@charset "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #F6F8FC;
+}
+
+.signup-form {
+	width: 750px;
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+}
+
+h2 {
+	text-align: center;
+	padding: 30px 0 5px;
+	font-size: 28px;
+	color: #333;
+	font-weight: bold;
+}
+
+h2 p {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 5px;
+	color: #555;
+}
+
+.container {
+	padding: 30px 40px 40px;
+}
+
+.main {
+	width: 100%;
+}
+
+form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.contents {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+/* Form inputs styling */
+input[type="text"], input[type="email"], input[type="password"], input[type="date"]
+	{
+	width: 100%;
+	padding: 12px 15px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	font-size: 15px;
+	transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,
+	input[type="date"]:focus {
+	border-color: #6C4E31;
+	outline: none;
+}
+
+/* Date styling */
+.date-details {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.date-title {
+	font-size: 16px !important;
+	font-weight: 600 !important;
+	color: #333;
+	margin: 0 !important;
+}
+
+/* Gender styling */
+.gender-details {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-top: 5px;
+}
+
+.gender-title {
+	font-size: 16px;
+	font-weight: 600;
+	color: #333;
+}
+
+.category {
+	display: flex;
+	gap: 25px;
+	margin-top: 8px;
+}
+
+.gender-details input[type="radio"] {
+	display: none;
+}
+
+.category label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+}
+
+.zero {
+	position: relative;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border: 2px solid #6C4E31;
+	border-radius: 50%;
+}
+
+.zero:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 10px;
+	height: 10px;
+	background: #6C4E31;
+	border-radius: 50%;
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+
+#zero-1:checked ~ .category label:nth-child(1) .zero:before, #zero-2:checked 
+	~ .category label:nth-child(2) .zero:before {
+	opacity: 1;
+}
+
+/* Profile picture styling */
+.form-group {
+	margin-top: 5px;
+}
+
+.col label {
+	display: block;
+	font-size: 16px;
+	font-weight: 600;
+	color: #333;
+	margin-bottom: 12px;
+}
+
+input[type="file"] {
+	width: 100%;
+	font-size: 14px;
+	padding: 8px 0;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+	background-color: #6C4E31;
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 6px;
+	cursor: pointer;
+	margin-right: 15px;
+	transition: background-color 0.3s;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+	background-color: #835f3b;
+}
+
+/* Button and account link styling */
+button.btn {
+	grid-column: span 2;
+	background-color: #6C4E31;
+	color: white;
+	border: none;
+	padding: 12px 0;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	width: 150px;
+	margin: 10px auto 0;
+}
+
+button.btn:hover {
+	background-color: #835f3b;
+}
+
+.account {
+	grid-column: span 2;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 15px;
+	color: #555;
+}
+
+.account a {
+	color: #6C4E31;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.account a:hover {
+	text-decoration: underline;
+}
+
+/* Responsive styles */
+@media ( max-width : 768px) {
+	.signup-form {
+		width: 90%;
+	}
+	form {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+	button.btn, .account {
+		grid-column: span 1;
+	}
+}

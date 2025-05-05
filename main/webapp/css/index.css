@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Lato", sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+nav {
+	color: white;
+	padding: 20px 50px;
+}
+
+.navTop {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.searchInput::placeholder {
+	color: lightgray;
+}
+
+.icon {
+	color: aliceblue;
+}
+
+.navBottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 130px;
+}
+
+.menuItem {
+	margin-right: 50px;
+	cursor: pointer;
+	color: lightgray;
+	font-weight: 400;
+}
+
+.slider {
+	overflow: hidden;
+}
+
+.sliderItem {
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.cartButton {
+	background-color: #4CAF50;
+	/* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	width: 150px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 30px;
+}
+
+.cartButton:hover {
+	background-color: #45a049;
+}
+
+.buyButton {
+	background-color: #eee788;
+	/* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	width: 150px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 30px;
+}
+
+.buyButton:hover {
+	background-color: #d4ce77;
+}
+
+.features {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 50px;
+}
+
+.feature {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.featureIcon {
+	width: 150px;
+	height: 150px;
+}
+
+.featureTitle {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 20px;
+}
+
+.featureDesc {
+	color: gray;
+	width: 50%;
+	height: 100px;
+}
+
+.slider {
+	height: 100vh;
+}
+
+.copyright {
+	font-weight: 300;
+	font-size: 14px;
+}
+
+@media screen and (max-width:480px) {
+	nav {
+		padding: 20px;
+	}
+	.search {
+		display: none;
+	}
+	.navBottom {
+		flex-wrap: wrap;
+	}
+	.menuItem {
+		margin: 20px;
+		font-weight: 700;
+		font-size: 20px;
+	}
+	.slider {
+		clip-path: none;
+	}
+	.payment {
+		width: 90%;
+		padding: 20px;
+	}
+}
